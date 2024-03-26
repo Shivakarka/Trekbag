@@ -1,11 +1,4 @@
-import { useState } from "react";
-import { initialItems } from "../lib/constants";
-
-const ItemList = () => {
-  const [items, setItems] = useState(initialItems);
-
-  console.log(setItems);
-
+const ItemList = ({ items }) => {
   return (
     <ul>
       {items.map((item) => (

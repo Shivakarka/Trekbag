@@ -1,14 +1,13 @@
-import AddItemForm from "./AddItemForm"
-import ButtonGroup from "./ButtonGroup"
+import AddItemForm from "./AddItemForm";
+import ButtonGroup from "./ButtonGroup";
 
-
-const Sidebar = () => {
+const Sidebar = ({ setItems }) => {
   return (
     <div className="sidebar">
-        <AddItemForm/>
-        <ButtonGroup/>
+      <AddItemForm setItems={setItems} />
+      <ButtonGroup />
     </div>
-  )
-}
+  );
+};
 
-export default Sidebar
+export default Sidebar;
