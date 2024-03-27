@@ -1,8 +1,8 @@
-import BackgroundHeading from "./BackgroundHeading";
-import Footer from "./Footer";
-import Header from "./Header";
-import ItemList from "./ItemList";
-import Sidebar from "./Sidebar";
+import BackgroundHeading from "./BackgroundHeading.tsx";
+import Footer from "./Footer.tsx";
+import Header from "./Header.tsx";
+import ItemList from "./ItemList.tsx";
+import Sidebar from "./Sidebar.tsx";
 
 function App() {
   return (

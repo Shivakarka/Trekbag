@@ -1,15 +1,21 @@
 import { useRef, useState } from "react";
-import Button from "./Button";
+import Button from "./Button.tsx";
 
-const AddItemForm = ({ onAddItem }) => {
+type AddItemFormProps = {
+  onAddItem: (itemText: string) => void;
+};
+
+const AddItemForm = ({ onAddItem }: AddItemFormProps) => {
   const [itemText, setItemText] = useState("");
-  const inputRef = useRef();
+  const inputRef = useRef<HTMLInputElement>(null);
 
-  const handleSubmit = (e) => {
+  const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     if (!itemText.trim()) {
       alert("Please enter an item name.");
-      inputRef.current.focus();
+      if (inputRef.current) {
+        inputRef.current.focus();
+      }
       return;
     }
 

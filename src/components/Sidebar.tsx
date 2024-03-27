@@ -1,6 +1,6 @@
 import { useItemsStore } from "../stores/itemsStore";
-import AddItemForm from "./AddItemForm";
-import ButtonGroup from "./ButtonGroup";
+import AddItemForm from "./AddItemForm.tsx";
+import ButtonGroup from "./ButtonGroup.tsx";
 
 const Sidebar = () => {
   const addItem = useItemsStore((state) => state.addItem);

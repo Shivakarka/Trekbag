@@ -1,8 +1,9 @@
 import { create } from "zustand";
 import { persist } from "zustand/middleware";
-import { initialItems } from "../lib/constants";
+import { initialItems } from "../lib/constants.ts";
+import { ItemState } from "../lib/types.ts";
 
-export const useItemsStore = create(
+export const useItemsStore = create<ItemState, [["zustand/persist", unknown]]>(
   persist(
     (set) => ({
       items: initialItems,

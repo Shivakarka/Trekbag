@@ -1,6 +1,6 @@
-import { useItemsStore } from "../stores/itemsStore";
-import Counter from "./Counter";
-import Logo from "./Logo";
+import { useItemsStore } from "../stores/itemsStore.ts";
+import Counter from "./Counter.tsx";
+import Logo from "./Logo.tsx";
 
 const Header = () => {
   const items = useItemsStore((state) => state.items);

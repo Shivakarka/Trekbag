@@ -1,7 +1,7 @@
 import Select from "react-select";
-import EmptyView from "./EmptyView";
+import EmptyView from "./EmptyView.tsx";
 import { useMemo, useState } from "react";
-import { useItemsStore } from "../stores/itemsStore";
+import { useItemsStore } from "../stores/itemsStore.ts";
 
 const sortingOptions = [
   {
@@ -28,14 +28,14 @@ const ItemList = () => {
     () =>
       [...items].sort((a, b) => {
         if (sortBy === "packed") {
-          return b.packed - a.packed;
+          return +b.packed - +a.packed;
         }
 
         if (sortBy === "unpacked") {
-          return a.packed - b.packed;
+          return +a.packed - +b.packed;
         }
 
-        return;
+        return 0;
       }),
     [items, sortBy]
   );
@@ -47,7 +47,7 @@ const ItemList = () => {
       {items.length > 0 && (
         <section className="sorting">
           <Select
-            onChange={(option) => setSortBy(option.value)}
+            onChange={(option) => setSortBy(option!.value)}
             defaultValue={sortingOptions[0]}
             options={sortingOptions}
           />
@@ -66,7 +66,17 @@ const ItemList = () => {
   );
 };
 
-function Item({ item, onDeleteItem, onToggleItem }) {
+type ItemProps = {
+  item: {
+    id: number;
+    name: string;
+    packed: boolean;
+  };
+  onDeleteItem: (id: number) => void;
+  onToggleItem: (id: number) => void;
+};
+
+function Item({ item, onDeleteItem, onToggleItem }: ItemProps) {
   return (
     <li className="item">
       <label>

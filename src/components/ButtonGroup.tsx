@@ -1,5 +1,5 @@
-import { useItemsStore } from "../stores/itemsStore";
-import Button from "./Button";
+import { useItemsStore } from "../stores/itemsStore.ts";
+import Button from "./Button.tsx";
 
 const ButtonGroup = () => {
   const markAllAsComplete = useItemsStore((state) => state.markAllAsComplete);
