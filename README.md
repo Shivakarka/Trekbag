@@ -2,7 +2,7 @@
 
 Deployed Live Link : [Click here](https://trekbag-sk.vercel.app/)
 
-Tech Stack : React JS, Zustand
+Tech Stack : React JS, Typescript, Zustand
 
 ## Introduction
 
