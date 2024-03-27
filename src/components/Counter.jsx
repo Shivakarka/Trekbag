@@ -1,11 +1,9 @@
-
-
-const Counter = () => {
+const Counter = ({ totalNumberOfItems, numberOfItemsPacked }) => {
   return (
     <p>
-      <b>1</b> / 3 items packed
+      <b>{numberOfItemsPacked}</b> / {totalNumberOfItems} items packed
     </p>
-  )
-}
+  );
+};
 
-export default Counter
+export default Counter;
