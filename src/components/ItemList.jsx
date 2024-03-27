@@ -1,25 +1,30 @@
-const ItemList = ({ items }) => {
+const ItemList = ({ items, handleDeleteItem, handleToggleItem }) => {
   return (
     <ul>
       {items.map((item) => (
-        <Item key={item.id} item={item} />
+        <Item
+          key={item.id}
+          item={item}
+          onDeleteItem={handleDeleteItem}
+          onToggleItem={handleToggleItem}
+        />
       ))}
     </ul>
   );
 };
 
-function Item({ item }) {
+function Item({ item, onDeleteItem, onToggleItem }) {
   return (
     <li className="item">
       <label>
         <input
-          onChange={() => console.log("clicked")}
+          onChange={() => onToggleItem(item.id)}
           type="checkbox"
           checked={item.packed}
         />
         {item.name}
       </label>
-      <button>❌</button>
+      <button onClick={() => onDeleteItem(item.id)}>❌</button>
     </li>
   );
 }
