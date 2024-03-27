@@ -1,8 +1,39 @@
-# React + Vite
+# Trekbag - Your Travel Companion
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Deployed Live Link : [Click here](https://trekbag-sk.vercel.app/)
 
-Currently, two official plugins are available:
+Tech Stack : React JS, Zustand
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Introduction
+
+Trekbag is a comprehensive todo list application designed specifically for travellers. It helps users to organize their travel plans and ensure they don't miss any important tasks or items during their journey.
+
+## Getting Started
+
+Guide for users to setup the project on their local machines.
+
+### Installation
+
+Step-by-step instructions on how to install and run the project locally.
+
+```
+# Clone the repository
+git clone https://github.com/Shivakarka/trekbag.git
+
+# Navigate to the project directory
+cd trekbag
+
+# Install dependencies
+npm install
+
+# Start the development server
+npm run dev
+
+```
+
+## Screenshots
+
+![Screenshot 2024-03-27 162501](https://github.com/Shivakarka/Trekbag/assets/64298475/06119791-bf74-4eaf-9112-ed93836f277d)
+
+
+
