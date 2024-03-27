@@ -299,6 +299,68 @@ h1 {
   }
 }
 
+@media (max-width: 600px) {
+  h1 {
+    display: none;
+  }
+
+  main {
+    width: auto;
+    height: 100%;
+    grid-template-columns: 1fr;
+    grid-template-rows: 59px 300px 1fr;
+    overflow: auto;
+  }
+
+  .item-list {
+    grid-column: 1;
+    grid-row: 3;
+    height: 100%;
+    margin-top: 30px;
+  }
+
+  .sidebar {
+    grid-column: 1;
+    grid-row: 1;
+    width: 100%;
+  }
+
+  .button-group {
+    margin-top: 10px;
+  }
+}
+
+@media (min-width: 601px) and (max-width: 900px) {
+  #root {
+    height: 110vh;
+  }
+
+  main {
+    width: auto;
+    height: 100%;
+    grid-template-columns: 1fr;
+    grid-template-rows: 59px 1fr 1fr;
+    overflow: auto;
+  }
+
+  .item-list {
+    grid-column: 1;
+    grid-row: 3;
+    height: 100%;
+    margin-top: 30px;
+  }
+
+  .sidebar {
+    grid-column: 1;
+    grid-row: 1;
+    width: 100%;
+  }
+
+  .button-group {
+    margin-top: 10px;
+  }
+}
+
 footer {
   width: min(972px, 100%);
   display: flex;
